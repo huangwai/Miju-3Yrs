@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3 Years With You</title>
+    <link rel="icon" href="../Resources/favicon.ico" />
+    <link rel="stylesheet" href="../map.css" />
+    <style>
+      /* Container to hold the responsive div */
+      .container {
+        width: 100%; /* Full width of the viewport */
+        max-width: 1200px; /* Limit the maximum width */
+        margin: 0 auto; /* Center the container horizontally */
+        padding: 10px; /* Add some padding */
+        box-sizing: border-box; /* Include padding in width calculation */
+      }
+      /* The responsive div */
+      .responsive-div {
+        width: 100%; /* Full width of its container */
+        height: 300px; /* Fixed height */
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 20px;
+        box-sizing: border-box; /* Include padding in width/height calculation */
+      }
+
+      /* Media query for tablets (max-width: 768px) */
+      @media (max-width: 768px) {
+        .responsive-div {
+          height: 250px; /* Adjust height for smaller screens */
+        }
+      }
+
+      /* Media query for mobile (max-width: 480px) */
+      @media (max-width: 480px) {
+        .responsive-div {
+          height: 200px; /* Adjust height further for mobile */
+        }
+      }
+
+      /* Container for the gallery */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+        gap: 16px; /* Space between images */
+        padding: 16px;
+      }
+
+      /* Style for each image in the gallery */
+      .gallery img {
+        width: 200px; /* Fixed width */
+        height: 100px; /* Fixed height */
+        object-fit: cover; /* Ensures images cover the area without distortion */
+        border-radius: 8px; /* Rounded corners for images */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+        transition: transform 0.3s ease; /* Smooth zoom effect */
+      }
+
+      /* Hover effect for zooming */
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="progress">
+        <div class="progress_inner">
+          <div class="progress_inner__step">
+            <label for="step-1">Pick Up</label>
+          </div>
+          <div class="progress_inner__step">
+            <label for="step-2">Dinner</label>
+          </div>
+          <div class="progress_inner__step">
+            <label for="step-3">Dessert</label>
+          </div>
+          <div class="progress_inner__step">
+            <label for="step-4">Mystery Activity</label>
+          </div>
+          <div class="progress_inner__step">
+            <label for="step-5">Back Home</label>
+          </div>
+          <input checked="checked" id="step-1" name="step" type="radio" />
+          <input id="step-2" name="step" type="radio" />
+          <input id="step-3" name="step" type="radio" />
+          <input id="step-4" name="step" type="radio" />
+          <input id="step-5" name="step" type="radio" />
+          <div class="progress_inner__bar"></div>
+          <div class="progress_inner__bar--set"></div>
+          <div class="progress_inner__tabs">
+            <div class="tab tab-0">
+              <h1>Steal Miss Mi-Ju For An Adventure</h1>
+              <p>
+                At precisely 6:00 PM, Mr. Jimmy shall promptly arrive at the
+                distinguished residence of Miss Mi-Ju to escort her to an
+                elegant dinner engagement.
+              </p>
+            </div>
+            <div class="tab tab-1">
+              <h1>Tasty Dinner @ Tiger Dumplings</h1>
+              <p>
+                Dinner shall take place at the esteemed establishment, Tiger
+                Dumplings, located in Arlington, Virginia, where we shall
+                partake in the dim sum entrées with the utmost enthusiasm and
+                decorum.
+              </p>
+              <div class="gallery">
+                <img
+                  src="https://placehold.jp/3d4070/ffffff/150x150.png"
+                  alt="Image 1"
+                />
+                <img src="https://via.placeholder.com/300x200" alt="Image 2" />
+                <img src="https://via.placeholder.com/300x200" alt="Image 3" />
+              </div>
+            </div>
+            <div class="tab tab-2">
+              <h1>Dessert @ Mimi Handmade?</h1>
+              <p>
+                Prior to the aforementioned leisure destination, Mr. Jimmy shall
+                graciously present delectable ice cream from Mimi's Handmade to
+                Miss Mi-Ju, ensuring its delightful indulgence. A word of
+                caution: said scoops may be shared in harmonious enjoyment
+                between the two of us."
+              </p>
+              <div class="gallery">
+                <img src="https://via.placeholder.com/300x200" alt="Image 1" />
+                <img src="https://via.placeholder.com/300x200" alt="Image 2" />
+                <img src="https://via.placeholder.com/300x200" alt="Image 3" />
+              </div>
+            </div>
+            <div class="tab tab-3">
+              <h1>Drinks @ Holly Jolly Bar</h1>
+              <p>
+                Mr. Jimmy shall escort Miss Mi-Ju to a distinguished pop-up
+                Christmas holiday venue, the Holly Jolly Bar, located at The
+                Brighton in The Wharf, Washington, D.C., to partake in
+                delightful libations, drinks, and revel in an atmosphere of
+                festive relaxation.
+              </p>
+              <div class="gallery">
+                <img src="https://via.placeholder.com/300x200" alt="Image 1" />
+                <img src="https://via.placeholder.com/300x200" alt="Image 2" />
+                <img src="https://via.placeholder.com/300x200" alt="Image 3" />
+              </div>
+            </div>
+            <div class="tab tab-4">
+              <h1>Do Not Break Curfew</h1>
+              <p>
+                By precisely 10:30 PM, Mr. Jimmy shall dutifully ensure that
+                Miss Mi-Ju is returned to her residence promptly, in preparation
+                for her evening repose.
+              </p>
+              <a href="../index.html"
+                ><button class="custom-btn btn-11">
+                  Home
+                  <div class="dot"></div></button
+              ></a>
+            </div>
+          </div>
+          <div class="progress_inner__status">
+            <div class="box_base"></div>
+            <div class="box_lid"></div>
+            <div class="box_ribbon"></div>
+            <div class="box_bow">
+              <div class="box_bow__left"></div>
+              <div class="box_bow__right"></div>
+            </div>
+            <div class="box_item"></div>
+            <div class="box_tag"></div>
+            <div class="box_string"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function openInNewTab(url) {
+        window.open(url, "_blank");
+      }
+    </script>
+  </body>
+</html>
