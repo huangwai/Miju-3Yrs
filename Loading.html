@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loading Animation</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <link rel="stylesheet" href="loading.css" />
+    <title>3 Years With You</title>
     <style>
       body {
         margin: 0;
@@ -12,12 +13,14 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background-color: #f4f4f4;
+        background-color: rgb(250, 218, 221);
         overflow: hidden;
       }
 
       .loader-container {
         text-align: center;
+        opacity: 1;
+        transition: opacity 1s ease;
       }
 
       .progress-bar {
@@ -32,7 +35,7 @@
       .progress-fill {
         height: 100%;
         width: 0%;
-        background: linear-gradient(90deg, #4caf50, #81c784);
+        background: linear-gradient(90deg, #fb6f92, #e97c97);
         border-radius: 10px;
         transition: width 0.1s;
       }
@@ -41,10 +44,31 @@
         font-size: 18px;
         color: #333;
       }
+
+      .hidden {
+        opacity: 0;
+      }
     </style>
   </head>
   <body>
-    <div class="loader-container">
+    <div class="canvas">
+      <div class="foot"></div>
+      <div class="foot" id="right"></div>
+      <div class="hair"></div>
+      <div class="psyduck">
+        <div class="beak">
+          <div class="nostrils"></div>
+        </div>
+        <div class="blush"></div>
+        <div class="eyes"></div>
+      </div>
+      <div class="arm"></div>
+      <div class="right arm"></div>
+    </div>
+    <div class="shadow"></div>
+
+    <!-- Below is loading stuff -->
+    <div class="loader-container" id="loaderContainer">
       <div class="progress-bar">
         <div class="progress-fill" id="progressFill"></div>
       </div>
@@ -57,15 +81,21 @@
       function updateProgressBar() {
         const progressFill = document.getElementById("progressFill");
         const loadingText = document.getElementById("loadingText");
+        const loaderContainer = document.getElementById("loaderContainer");
 
         if (progress <= 100) {
           progressFill.style.width = progress + "%";
           loadingText.textContent = `Loading... ${progress}%`;
           progress++;
-          setTimeout(updateProgressBar, 30); // Adjust speed here
+          setTimeout(updateProgressBar, 70); // Adjust speed here
         } else {
-          // Redirect to the home page
-          window.location.href = "Home.html"; // Replace with your homepage URL
+          // Add fade-out effect
+          loaderContainer.classList.add("hidden");
+
+          // Wait for fade-out to complete before redirecting
+          setTimeout(() => {
+            window.location.href = "Home.html"; // Replace with your homepage URL
+          }, 1000); // Match fade-out duration
         }
       }
 

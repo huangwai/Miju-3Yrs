@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3 Years With You</title>
-    <link rel="icon" href="favicon.ico" />
+    <title>Simple Password Authentication</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -14,22 +13,18 @@
         justify-content: center;
         height: 100vh;
         margin: 0;
-        background-color: rgb(250, 218, 221);
+        background-color: #f4f4f9;
       }
       .login-box {
         padding: 20px;
-        border: 1px solid rgb(250, 218, 221);
+        border: 1px solid #ddd;
         border-radius: 5px;
         background: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 90%;
-        max-width: 400px;
-        box-sizing: border-box;
       }
       .login-box h1 {
         margin-bottom: 20px;
         font-size: 24px;
-        text-align: center;
       }
       .login-box input {
         margin-bottom: 10px;
@@ -37,44 +32,29 @@
         width: 100%;
         border: 1px solid #ddd;
         border-radius: 5px;
-        box-sizing: border-box;
       }
       .login-box button {
         padding: 10px;
         width: 100%;
-        background-color: #fb6f92;
+        background-color: #007bff;
         color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        font-size: 16px;
       }
       .login-box button:hover {
-        background-color: rgb(250, 218, 221);
+        background-color: #0056b3;
       }
       .message {
         margin-top: 10px;
-        color: #fb6f92;
-        text-align: center;
-      }
-      /* Responsive adjustments */
-      @media (max-width: 600px) {
-        .login-box {
-          padding: 15px;
-        }
-        .login-box h1 {
-          font-size: 20px;
-        }
-        .login-box button {
-          font-size: 14px;
-        }
+        color: red;
       }
     </style>
   </head>
   <body>
     <div class="login-box">
       <h1>When did Mi-Ju & Jimmy start dating?</h1>
-      <input id="password" placeholder="MM/DD/YYYY" required />
+      <input id="password" placeholder="MM/dd/YYYY" required />
       <button onclick="authenticate()">Login</button>
       <div id="message" class="message"></div>
     </div>
