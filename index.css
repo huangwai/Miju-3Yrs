@@ -19,7 +19,7 @@ body {
 }
 #canvas {
   position: relative;
-  width: 900px;
+  width: 1000px;
   height: 600px;
   background-color: rgb(250, 218, 221);
   /* border: 1px solid black; */
@@ -667,7 +667,7 @@ body {
   left: -64px;
   width: 800px;
   height: 600px;
-  background: #99ddfd;
+  background: #edcaa1;
   transform: rotateX(87deg) rotateY(-1deg) rotateZ(15deg);
 }
 #desk-side {
@@ -682,7 +682,7 @@ body {
   left: -6px;
   width: 800px;
   height: 200px;
-  background: #6f62b7;
+  background: #cd9d6f;
 }
 #desk-side:after {
   content: "";
@@ -691,7 +691,7 @@ body {
   left: 474px;
   width: 800px;
   height: 200px;
-  background: #257790;
+  background: #feeed5;
   transform: rotateX(1.1deg) rotateY(78.5deg) rotateZ(-3.5deg);
 }
 #monitor-deck {

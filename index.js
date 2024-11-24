@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $("#pengsoo").on("click", function () {
-    console.log("hi");
+    console.log("Pengsoo says hi!");
     $("#pengsoo").removeClass("crazy");
     $("#pengsoo").addClass("wakeUp");
     $("#face").addClass("face");
