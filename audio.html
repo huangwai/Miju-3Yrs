@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Audio</title>
+  </head>
+  <body>
+    <audio id="background-audio" autoplay loop>
+      <source src="keshi  Soft Spot (Lyric Video).mp4" type="audio/mpeg" />
+      Your browser does not support the audio tag.
+    </audio>
+
+    <script>
+      const audio = document.getElementById("background-audio");
+      const savedTime = localStorage.getItem("audio-playback-time");
+
+      // Resume playback from the saved position if available
+      if (savedTime) {
+        audio.currentTime = savedTime;
+      }
+
+      audio.play();
+
+      // Save the playback position before the page unloads
+      window.addEventListener("beforeunload", () => {
+        localStorage.setItem("audio-playback-time", audio.currentTime);
+      });
+    </script>
+  </body>
+</html>
